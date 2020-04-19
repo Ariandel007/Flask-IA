@@ -1,15 +1,11 @@
 import copy
 
 from flask import Flask, request
-from flask_sqlalchemy import SQLAlchemy
-from flask_marshmallow import Marshmallow
 from flask_restful import Api, Resource
-# from flask import Flask
 from flask import jsonify
 from flask_restful.utils import cors
 import json
-import jsonpickle
-from flask_cors import CORS, cross_origin
+from flask_cors import CORS
 
 import random as rn
 
@@ -227,11 +223,6 @@ class schedules:
         k = 0
         fitness_esperado = False
         while not fitness_esperado:
-            if k < self.Nclases:
-                if k == len(self.Individuos[k].clasess):
-                    k = 0
-            else:
-                k = 0
 
             if i == x:
                 break
